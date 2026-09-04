@@ -1,5 +1,6 @@
 // Owner: Member 1 — Feature 1: Report an Issue
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx';
 import { createIssue } from '../api/client.js';
 
@@ -13,6 +14,7 @@ const ALLOWED_CATEGORIES = [
 ];
 
 export default function Report() {
+  const navigate = useNavigate();
   const initialFormState = {
     category: '',
     title: '',
@@ -98,7 +100,7 @@ export default function Report() {
       };
 
       const result = await createIssue(payload);
-      setCreatedIssue(result);
+      navigate('/stats');
       setFormData(initialFormState);
       setFieldErrors({});
     } catch (err) {

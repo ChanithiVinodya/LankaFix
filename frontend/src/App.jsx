@@ -1,34 +1,37 @@
-// Shared — route setup (react-router-dom).
-// Routes: / (Landing), /report, /track, /browse, /stats
-
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Landing from './pages/Landing.jsx';
 import Report from './pages/Report.jsx';
-
-// -------------------------------------------------------------
-// Placeholder routes for team members:
-// TODO (Member 2 - Feature 2: Track an Issue):
+import Stats from './pages/Stats.jsx';
 import Track from './pages/Track.jsx';
-//
-// TODO (Member 3 - Feature 3: Browse, Search & Filter):
 import Browse from './pages/Browse.jsx';
-//
-// TODO (Member 4 - Feature 4: Stats Dashboard & Status Updates):
-//   import Stats from './pages/Stats.jsx';
-//   <Route path="/stats" element={<Stats />} />
-// -------------------------------------------------------------
 
-export default function App() {
+const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/report" element={<Report />} />
-
-      {/* TODO (Member 2): */}
-      <Route path="/track" element={<Track />} />
-      <Route path="/browse" element={<Browse />} />
-      {/* TODO (Member 4): <Route path="/stats" element={<Stats />} /> */}
-    </Routes>
+    <div className="min-h-screen bg-gray-50">
+      <nav className="bg-white shadow-sm py-4 px-8 mb-8 flex justify-between items-center border-b">
+        <div className="flex items-center gap-2">
+          <span className="text-xl font-bold text-teal-700">LK</span>
+          <h1 className="text-xl font-bold text-teal-700">LankaFix</h1>
+        </div>
+        <div className="flex gap-6 text-sm font-medium text-gray-600">
+          <a href="/" className="hover:text-teal-700 transition-colors">Home</a>
+          <a href="/report" className="hover:text-teal-700 transition-colors">Report</a>
+          <a href="/track" className="hover:text-teal-700 transition-colors">Track</a>
+          <a href="/browse" className="hover:text-teal-700 transition-colors">Browse</a>
+          <a href="/stats" className="hover:text-teal-700 transition-colors">Stats</a>
+        </div>
+      </nav>
+      
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/report" element={<Report />} />
+        <Route path="/track" element={<Track />} />
+        <Route path="/browse" element={<Browse />} />
+        <Route path="/stats" element={<Stats />} />
+      </Routes>
+    </div>
   );
-}
+};
+
+export default App;

@@ -74,8 +74,8 @@ router.post('/', async (req, res) => {
       location: location.trim(),
       reporterName: reporterName.trim(),
       reporterContact: String(reporterContact).trim(),
-      status: 'Reported',
-      dateReported: new Date().toISOString()
+      status: 'Unseen',
+      createdAt: new Date().toISOString()
     };
 
     issues.push(newIssue);
