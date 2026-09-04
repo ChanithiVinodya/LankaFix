@@ -42,11 +42,15 @@ export async function createIssue(payload) {
 //   }
 //
 // TODO (Member 3 - Feature 3: Browse, Search & Filter):
-//   export async function listIssues(filters = {}) {
-//     const params = new URLSearchParams(filters);
-//     const res = await fetch(`${baseUrl}/api/issues?${params}`);
-//     ...
-//   }
+export async function listIssues(filters = {}) {
+  const params = new URLSearchParams(filters);
+  const res = await fetch(`${baseUrl}/api/issues?${params}`);
+  const data = await res.json();
+  if (!res.ok) {
+    throw new Error(data.message || 'Failed to fetch issues');
+  }
+  return data;
+}
 //
 // TODO (Member 4 - Feature 4: Stats Dashboard & Status Updates):
 //   export async function getStats() {
@@ -60,5 +64,6 @@ export async function createIssue(payload) {
 // -------------------------------------------------------------
 
 export default {
-  createIssue
+  createIssue,
+  listIssues
 };

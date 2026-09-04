@@ -2,6 +2,7 @@
 import express from 'express';
 import cors from 'cors';
 import createIssueRouter from './routes/createIssue.js';
+import listIssuesRouter from './routes/listIssues.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -21,8 +22,7 @@ app.use('/api/issues', createIssueRouter);
 //   e.g. app.use('/api/issues', getIssueByIdRouter);
 //
 // TODO (Member 3 - Feature 3: Browse, Search & Filter):
-//   Mount router for GET /api/issues (with ?category=, ?status=, ?search=)
-//   e.g. app.use('/api/issues', listIssuesRouter);
+app.use('/api/issues', listIssuesRouter);
 //
 // TODO (Member 4 - Feature 4: Stats & Status Updates):
 //   Mount routers for GET /api/stats and PATCH /api/issues/:id/status
