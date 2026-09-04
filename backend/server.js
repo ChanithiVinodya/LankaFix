@@ -14,9 +14,21 @@ app.use(express.json());
 // POST /api/issues -> Feature 1: Report an Issue (Member 1)
 app.use('/api/issues', createIssueRouter);
 
-// TODO (Member 2): app.use('/api/issues', getIssueByIdRouter);
-// TODO (Member 3): app.use('/api/issues', listIssuesRouter);
-// TODO (Member 4): app.use('/api', statsRouter);
+// -------------------------------------------------------------
+// Placeholder routes for team members (do not implement here):
+// TODO (Member 2 - Feature 2: Track an Issue):
+//   Mount router for GET /api/issues/:id
+//   e.g. app.use('/api/issues', getIssueByIdRouter);
+//
+// TODO (Member 3 - Feature 3: Browse, Search & Filter):
+//   Mount router for GET /api/issues (with ?category=, ?status=, ?search=)
+//   e.g. app.use('/api/issues', listIssuesRouter);
+//
+// TODO (Member 4 - Feature 4: Stats & Status Updates):
+//   Mount routers for GET /api/stats and PATCH /api/issues/:id/status
+//   e.g. app.use('/api/stats', statsRouter);
+//        app.use('/api/issues', updateStatusRouter);
+// -------------------------------------------------------------
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -25,7 +37,7 @@ app.get('/api/health', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`LankaFix backend running on port ${PORT}`);
+  console.log(`LankaFix backend server is running on port ${PORT}`);
 });
 
 export default app;

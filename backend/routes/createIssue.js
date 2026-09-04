@@ -6,7 +6,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import generateNextId from '../utils/generateId.js';
-import { validateIssue } from '../validators/issueValidator.js';
+import validateIssue from '../validators/issueValidator.js';
 
 const router = express.Router();
 
@@ -37,7 +37,8 @@ async function saveExistingIssues(issues) {
 }
 
 /**
- * POST /api/issues
+ * POST /
+ * Mounted at /api/issues in server.js.
  * Creates a new issue report after server-side validation.
  */
 router.post('/', async (req, res) => {
@@ -54,7 +55,7 @@ router.post('/', async (req, res) => {
       reporterContact
     });
 
-    if (!validationResult.isValid) {
+    if (!validationResult.valid) {
       return res.status(400).json({ errors: validationResult.errors });
     }
 

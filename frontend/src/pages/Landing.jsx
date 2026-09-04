@@ -1,110 +1,113 @@
 // Owner: Member 1 — Feature 1: Landing Page
-// Hero section, problem explanation, CTAs, and category showcase.
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const CATEGORIES = [
-  { name: 'Pothole', icon: '🕳️', desc: 'Damaged roads & hazardous potholes' },
-  { name: 'Streetlight', icon: '💡', desc: 'Broken or non-functioning street lamps' },
-  { name: 'Garbage', icon: '🗑️', desc: 'Illegal dumping & uncollected waste' },
-  { name: 'Water Leak', icon: '💧', desc: 'Burst water mains & pipe leaks' },
-  { name: 'Infrastructure', icon: '🚧', desc: 'Damaged bridges, sidewalks & signs' },
-  { name: 'Other', icon: '📌', desc: 'Other public community issues' }
-];
+import Navbar from '../components/Navbar.jsx';
 
 export default function Landing() {
   return (
-    <div className="landing-page">
-      {/* Hero Section */}
-      <section className="landing-hero">
-        <div className="hero-badge">
-          <span>🇱🇰 Powered by Citizens & Communities</span>
-        </div>
-        <h1 className="hero-title">
-          Empowering Sri Lanka to Fix <span className="hero-highlight">Community Issues</span> Faster
-        </h1>
-        <p className="hero-subtitle">
-          From road potholes in Kottawa to broken streetlights in Kandy, report civic hazards directly, track progress transparently, and make our neighborhoods safer.
-        </p>
-        <div className="hero-actions">
-          <Link to="/report" className="btn btn-primary">
-            <span>📢</span> Report an Issue
-          </Link>
-          <Link to="/track" className="btn btn-secondary">
-            <span>🔍</span> Track Your Report
-          </Link>
-          <Link to="/browse" className="btn btn-secondary">
-            <span>📋</span> Browse Issues
-          </Link>
-        </div>
-      </section>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#f8fafc' }}>
+      {/* Renders Navbar at the top */}
+      <Navbar />
 
-      {/* Problem & Solution Section */}
-      <section className="landing-section">
-        <div className="section-header">
-          <p className="section-tag">Common Civic Challenges</p>
-          <h2 className="section-title">What can you report on LankaFix?</h2>
-          <p className="section-desc">
-            Quickly submit reports for any of the following infrastructure and public utility problems.
-          </p>
-        </div>
+      <main style={{ flex: 1 }}>
+        {/* Hero Section */}
+        <section style={{
+          background: 'linear-gradient(180deg, #f0fdfa 0%, #f8fafc 100%)',
+          padding: '4rem 1.5rem 3rem',
+          textAlign: 'center',
+          borderBottom: '1px solid #e2e8f0'
+        }}>
+          <div style={{ maxWidth: '850px', margin: '0 auto' }}>
+            <h1 style={{
+              fontSize: '2.75rem',
+              fontWeight: '800',
+              color: '#0f172a',
+              letterSpacing: '-0.02em',
+              marginBottom: '1rem'
+            }}>
+              LankaFix
+            </h1>
+            <p style={{
+              fontSize: '1.25rem',
+              fontWeight: '500',
+              color: '#0f766e',
+              marginBottom: '2rem'
+            }}>
+              A community-powered platform for reporting and tracking public infrastructure issues across Sri Lanka.
+            </p>
 
-        <div className="category-grid">
-          {CATEGORIES.map(cat => (
-            <div key={cat.name} className="category-card">
-              <div className="category-icon">{cat.icon}</div>
-              <h3 className="category-name">{cat.name}</h3>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.4rem' }}>
-                {cat.desc}
+            {/* Problem explanation paragraph */}
+            <div style={{
+              backgroundColor: '#ffffff',
+              padding: '1.75rem',
+              borderRadius: '10px',
+              border: '1px solid #e2e8f0',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+              textAlign: 'left',
+              marginBottom: '2.25rem',
+              lineHeight: '1.7',
+              color: '#334155'
+            }}>
+              <p>
+                Across Sri Lanka, dangerous potholes, broken streetlights, unattended garbage dumping, burst water pipes, and deteriorating public infrastructure routinely endanger daily life. These hazards severely disrupt <strong>commuters</strong> navigating congested roads, threaten the safety of <strong>pedestrians</strong> walking in poorly lit neighborhoods at night, and frustrate local <strong>residents</strong> dealing with uncollected waste and utility outages. Timely reporting and transparent tracking ensure local authorities and community leaders can identify problems quickly, allocate repair resources efficiently, and make Sri Lankan neighborhoods safer and cleaner for everyone.
               </p>
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* How it Works Section */}
-      <section className="landing-section" style={{ backgroundColor: '#ffffff', borderTop: '1px solid var(--border-color)' }}>
-        <div className="section-header">
-          <p className="section-tag">Simple & Transparent</p>
-          <h2 className="section-title">How LankaFix Works</h2>
-          <p className="section-desc">
-            A frictionless three-step process to get community problems resolved.
-          </p>
-        </div>
-
-        <div className="steps-grid">
-          <div className="step-card">
-            <div className="step-number">1</div>
-            <h3 className="step-title">Submit a Report</h3>
-            <p className="step-desc">
-              Fill out a quick form describing the hazard, exact location, category, and your contact info. Get an instant tracking ID.
-            </p>
+            {/* Two Call-to-Action buttons/links */}
+            <div style={{
+              display: 'flex',
+              gap: '1rem',
+              justifyContent: 'center',
+              flexWrap: 'wrap'
+            }}>
+              <Link
+                to="/report"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  backgroundColor: '#0f766e',
+                  color: '#ffffff',
+                  fontWeight: '600',
+                  padding: '0.85rem 1.6rem',
+                  borderRadius: '8px',
+                  textDecoration: 'none',
+                  boxShadow: '0 4px 6px -1px rgba(15, 118, 110, 0.2)'
+                }}
+              >
+                <span>📢</span> Report an Issue
+              </Link>
+              <Link
+                to="/track"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  backgroundColor: '#ffffff',
+                  color: '#0f172a',
+                  border: '1px solid #cbd5e1',
+                  fontWeight: '600',
+                  padding: '0.85rem 1.6rem',
+                  borderRadius: '8px',
+                  textDecoration: 'none'
+                }}
+              >
+                <span>🔍</span> Track an Issue
+              </Link>
+            </div>
           </div>
+        </section>
+      </main>
 
-          <div className="step-card">
-            <div className="step-number">2</div>
-            <h3 className="step-title">Track Status</h3>
-            <p className="step-desc">
-              Use your unique Report ID (e.g., LF-0001) anytime to check if the issue is Reported, In Progress, or Resolved.
-            </p>
-          </div>
-
-          <div className="step-card">
-            <div className="step-number">3</div>
-            <h3 className="step-title">Drive Action</h3>
-            <p className="step-desc">
-              Public visibility holds authorities accountable and informs fellow citizens about road safety and infrastructure status.
-            </p>
-          </div>
-        </div>
-
-        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-          <Link to="/report" className="btn btn-primary" style={{ padding: '0.85rem 2rem', fontSize: '1.05rem' }}>
-            Get Started — Report an Issue Now
-          </Link>
-        </div>
-      </section>
+      <footer style={{
+        padding: '1.5rem',
+        textAlign: 'center',
+        borderTop: '1px solid #e2e8f0',
+        color: '#64748b',
+        fontSize: '0.875rem'
+      }}>
+        <p>&copy; {new Date().getFullYear()} LankaFix. Civic Issue Reporting for Sri Lanka.</p>
+      </footer>
     </div>
   );
 }
