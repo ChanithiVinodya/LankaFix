@@ -10,7 +10,7 @@
 
 import { useState } from "react";
 
-const API_BASE = "/api"; // change to "http://localhost:5000/api" if no proxy is set up
+const API_BASE = "http://localhost:5000/api"; // backend is running on 5000
 
 const STAGES = ["Reported", "In Progress", "Resolved"];
 

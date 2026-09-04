@@ -1,2 +1,9 @@
-/* Shared — base styles and responsive breakpoints. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom globals (if any) */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
 /* TODO: base layout, mobile breakpoints */

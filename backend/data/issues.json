@@ -92,5 +92,27 @@
     "reporterContact": "0701867193",
     "status": "In Progress",
     "createdAt": "2026-09-04T06:44:32.964Z"
+  },
+  {
+    "id": "LF-1005",
+    "category": "Pothole",
+    "title": "large near the malabe bus stop",
+    "description": "dgdfhjyjvd",
+    "location": "malabe",
+    "reporterName": "hiru",
+    "reporterContact": "0779628049",
+    "status": "Unseen",
+    "createdAt": "2026-09-04T07:38:29.305Z"
+  },
+  {
+    "id": "LF-1006",
+    "category": "Streetlight",
+    "title": "broken street light",
+    "description": "a streetlight broken near sliit uni",
+    "location": "malabe",
+    "reporterName": "hiru",
+    "reporterContact": "0779628049",
+    "status": "Unseen",
+    "createdAt": "2026-09-04T07:49:24.261Z"
   }
 ]
