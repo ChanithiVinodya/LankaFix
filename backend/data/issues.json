@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "id": "LF-0001",
+    "category": "Pothole",
+    "title": "near the bus stop",
+    "description": "eadsferger",
+    "location": "colombo",
+    "reporterName": "chanithi",
+    "reporterContact": "0760693039",
+    "status": "Reported",
+    "dateReported": "2026-09-04T05:20:29.048Z"
+  }
+]
