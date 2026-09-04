@@ -3,7 +3,7 @@
     "id": "LF-0001",
     "title": "Pothole on Main Street",
     "description": "Large pothole causing traffic issues.",
-    "status": "Open",
+    "status": "In Progress",
     "createdAt": "2023-10-01T10:00:00Z"
   },
   {
@@ -19,5 +19,49 @@
     "description": "Water leaking from a pipe on Elm St.",
     "status": "Resolved",
     "createdAt": "2023-09-28T09:15:00Z"
+  },
+  {
+    "id": "LF-0004",
+    "category": "Garbage",
+    "title": "new nrw",
+    "description": "ghjkklkllll",
+    "location": "katunayaka, negombo",
+    "reporterName": "nimal nimal",
+    "reporterContact": "0701867193",
+    "status": "Resolved",
+    "dateReported": "2026-09-04T06:28:32.036Z"
+  },
+  {
+    "id": "LF-0005",
+    "category": "Streetlight",
+    "title": "new new",
+    "description": "nrghjddkkdldlldldld",
+    "location": "katunayaka, negombo",
+    "reporterName": "nimal nimal",
+    "reporterContact": "0701867193",
+    "status": "Resolved",
+    "dateReported": "2026-09-04T06:36:20.979Z"
+  },
+  {
+    "id": "LF-0006",
+    "category": "Other",
+    "title": "Test 123",
+    "description": "Check working or not",
+    "location": "katunayaka, negombo",
+    "reporterName": "nimal nimal",
+    "reporterContact": "0701867193",
+    "status": "In Progress",
+    "createdAt": "2026-09-04T06:41:16.386Z"
+  },
+  {
+    "id": "LF-0007",
+    "category": "Garbage",
+    "title": "test 345",
+    "description": "check again",
+    "location": "katunayaka, negombo",
+    "reporterName": "nimal nimal",
+    "reporterContact": "0701867193",
+    "status": "In Progress",
+    "createdAt": "2026-09-04T06:44:32.964Z"
   }
 ]

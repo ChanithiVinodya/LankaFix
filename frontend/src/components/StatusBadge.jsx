@@ -3,6 +3,8 @@ import React from 'react';
 const StatusBadge = ({ status }) => {
   const getBadgeStyles = () => {
     switch (status) {
+      case 'Unseen':
+        return 'bg-purple-100 text-purple-700 border-purple-200';
       case 'Open':
         return 'bg-red-100 text-red-700 border-red-200';
       case 'In Progress':

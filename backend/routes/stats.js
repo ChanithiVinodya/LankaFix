@@ -25,11 +25,12 @@ const writeIssues = (issues) => {
 router.get('/stats', (req, res) => {
   const issues = readIssues();
   const total = issues.length;
+  const unseen = issues.filter(i => i.status === 'Unseen').length;
   const open = issues.filter(i => i.status === 'Open').length;
   const inProgress = issues.filter(i => i.status === 'In Progress').length;
   const resolved = issues.filter(i => i.status === 'Resolved').length;
 
-  res.json({ total, open, inProgress, resolved, issues });
+  res.json({ total, unseen, open, inProgress, resolved, issues });
 });
 
 router.patch('/status', (req, res) => {
