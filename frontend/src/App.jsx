@@ -13,8 +13,7 @@ import Report from './pages/Report.jsx';
 //   <Route path="/track" element={<Track />} />
 //
 // TODO (Member 3 - Feature 3: Browse, Search & Filter):
-//   import Browse from './pages/Browse.jsx';
-//   <Route path="/browse" element={<Browse />} />
+import Browse from './pages/Browse.jsx';
 //
 // TODO (Member 4 - Feature 4: Stats Dashboard & Status Updates):
 //   import Stats from './pages/Stats.jsx';
@@ -28,7 +27,7 @@ export default function App() {
       <Route path="/report" element={<Report />} />
 
       {/* TODO (Member 2): <Route path="/track" element={<Track />} /> */}
-      {/* TODO (Member 3): <Route path="/browse" element={<Browse />} /> */}
+      <Route path="/browse" element={<Browse />} />
       {/* TODO (Member 4): <Route path="/stats" element={<Stats />} /> */}
     </Routes>
   );
