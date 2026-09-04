@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import createIssueRouter from './routes/createIssue.js';
 import listIssuesRouter from './routes/listIssues.js';
+import getIssueByIdRouter from './routes/getIssueById.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -20,6 +21,7 @@ app.use('/api/issues', createIssueRouter);
 // TODO (Member 2 - Feature 2: Track an Issue):
 //   Mount router for GET /api/issues/:id
 //   e.g. app.use('/api/issues', getIssueByIdRouter);
+app.use('/api/issues', getIssueByIdRouter);
 //
 // TODO (Member 3 - Feature 3: Browse, Search & Filter):
 app.use('/api/issues', listIssuesRouter);

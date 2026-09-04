@@ -1,13 +1,11 @@
 {
-  "name": "lankafix-backend",
+  "name": "backend",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
+  "main": "server.js",
   "scripts": {
-    "dev": "node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "express": "",
-    "cors": ""
+    "express": "^4.18.2"
   }
 }

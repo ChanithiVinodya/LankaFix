@@ -9,8 +9,7 @@ import Report from './pages/Report.jsx';
 // -------------------------------------------------------------
 // Placeholder routes for team members:
 // TODO (Member 2 - Feature 2: Track an Issue):
-//   import Track from './pages/Track.jsx';
-//   <Route path="/track" element={<Track />} />
+import Track from './pages/Track.jsx';
 //
 // TODO (Member 3 - Feature 3: Browse, Search & Filter):
 import Browse from './pages/Browse.jsx';
@@ -26,7 +25,8 @@ export default function App() {
       <Route path="/" element={<Landing />} />
       <Route path="/report" element={<Report />} />
 
-      {/* TODO (Member 2): <Route path="/track" element={<Track />} /> */}
+      {/* TODO (Member 2): */}
+      <Route path="/track" element={<Track />} />
       <Route path="/browse" element={<Browse />} />
       {/* TODO (Member 4): <Route path="/stats" element={<Stats />} /> */}
     </Routes>

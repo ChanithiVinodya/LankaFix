@@ -9,5 +9,41 @@
     "reporterContact": "0760693039",
     "status": "Reported",
     "dateReported": "2026-09-04T05:20:29.048Z"
+  },
+  {
+    "id": "LF-1001",
+    "type": "Pothole",
+    "location": "Galle Road, near Bambalapitiya",
+    "description": "Deep pothole causing traffic to swerve",
+    "status": "In Progress",
+    "createdAt": "2026-09-01T08:00:00.000Z",
+    "updatedAt": "2026-09-03T09:00:00.000Z"
+  },
+  {
+    "id": "LF-1002",
+    "type": "Street Light",
+    "location": "Kandy Road, near Peradeniya junction",
+    "description": "Street light not working for a week",
+    "status": "Reported",
+    "createdAt": "2026-09-02T18:00:00.000Z",
+    "updatedAt": "2026-09-02T18:00:00.000Z"
+  },
+  {
+    "id": "LF-1003",
+    "type": "Garbage",
+    "location": "Marine Drive, Colombo 3",
+    "description": "Illegal garbage dumping near the beach entrance",
+    "status": "Resolved",
+    "createdAt": "2026-08-28T07:00:00.000Z",
+    "updatedAt": "2026-08-30T12:00:00.000Z"
+  },
+  {
+    "id": "LF-1004",
+    "type": "Water Leak",
+    "location": "Negombo Road, near Wattala junction",
+    "description": "Water pipe leaking onto the main road",
+    "status": "Reported",
+    "createdAt": "2026-09-04T06:15:00.000Z",
+    "updatedAt": "2026-09-04T06:15:00.000Z"
   }
 ]
