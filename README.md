@@ -126,7 +126,7 @@ Open the frontend URL in your browser to use the application.
 
 ## Demonstration Video Link
 
-*[Add 2-minute demo video link here before submission]*
+https://drive.google.com/file/d/1Du-bIxouoozf2TDWElPIwp6sfmTmC9Bf/view?usp=drive_link
 
 ---
 
