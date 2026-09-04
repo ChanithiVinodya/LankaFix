@@ -31,6 +31,23 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'LankaFix API is operational' });
 });
 
+// Root route — basic API info
+app.get('/', (req, res) => {
+  res.json({
+    name: 'LankaFix API',
+    version: '1.0.0',
+    description: 'Issue tracking API for reporting, browsing, and managing local issues.',
+    endpoints: {
+      health: 'GET /api/health',
+      createIssue: 'POST /api/issues',
+      listIssues: 'GET /api/issues',
+      getIssueById: 'GET /api/issues/:id',
+      stats: 'GET /api/stats',
+      updateStatus: 'PATCH /api/status',
+    },
+  });
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`LankaFix backend server is running on port ${PORT}`);
