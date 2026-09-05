@@ -40,7 +40,7 @@ A user can:
 - **Frontend:** React (Vite)
 - **Backend:** Node.js + Express
 - **Data storage:** JSON file-based storage
-- **Deployment:** Frontend hosted on a static hosting platform (e.g. Vercel/Netlify); backend hosted on a Node-friendly platform (e.g. Render/Railway) — *[confirm final platforms used once deployed]*
+- **Deployment:** Frontend hosted on a static hosting platform Netlify; backend hosted on a Node-friendly platform Railway
 
 ---
 
