@@ -120,14 +120,17 @@ Open the frontend URL in your browser to use the application.
 
 ## Deployed Application Link
 
-*[Add live deployed link here before submission]*
+Front-End - https://lucky-starship-554e2c.netlify.app/
+Back End - https://lankafix-fs4w-production.up.railway.app/
 
 ---
 
 ## Demonstration Video Link
 
-*[Add 2-minute demo video link here before submission]*
+> **Update:** The demonstration video link has been updated with public access enabled.
 
+https://drive.google.com/file/d/1jj2MtUfrlGgcUrrRAvZxf2TnEFXhD0TZ/view?usp=sharing
+ 
 ---
 
 ## Repository Link
